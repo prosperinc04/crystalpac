@@ -1,0 +1,346 @@
+/* =====================================
+   GLOBAL STYLES
+===================================== */
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.6;
+  scroll-behavior: smooth;
+}
+
+h1,
+h2,
+h4,
+h5,
+h6 {
+  font-weight: bold;
+}
+
+a {
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+/* =====================================
+   NAVBAR
+===================================== */
+.navbar-brand img {
+  background-color: #fff;
+  border-radius: 50%;
+  padding: 4px;
+}
+
+/* =====================================
+   HERO SECTION
+===================================== */
+header {
+  background-image: url("images/mining-excavator-1736293_1280.jpg");
+  height: 80vh;
+  background-size: cover;
+  background-position: center;
+}
+
+.hero {
+  position: relative;
+  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.8);
+}
+
+.hero img {
+  max-width: 300px;
+}
+
+.hero h1 {
+  font-size: 3rem;
+  line-height: 1.1;
+}
+
+/* =====================================
+   ABOUT SECTION
+===================================== */
+section .btn {
+  transition: all 0.3s ease-in-out;
+}
+
+section .btn:hover {
+  background-color: #007bff;
+  border: none;
+  color: white;
+}
+
+.about-text p {
+  font-size: 1.1rem;
+}
+
+.about-image {
+  border-radius: 15px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s ease;
+}
+
+.about-image:hover {
+  transform: scale(1.02);
+}
+
+/* =====================================
+   MISSION / VISION / CORE VALUES
+===================================== */
+section.bg-white,
+section.bg-light {
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+}
+
+section h4 {
+  margin-bottom: 1rem;
+}
+
+/* =====================================
+   TEAM SECTION
+===================================== */
+.meet-team img {
+  width: 100px;
+  height: 100px;
+  object-fit: contain;
+  border: 2px solid #ccc;
+  padding: 8px;
+  background-color: #fff;
+}
+
+/* =====================================
+   FOOTER
+===================================== */
+footer {
+  font-size: 0.95rem;
+}
+
+footer h5 {
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+}
+
+footer a {
+  color: #ccc;
+  text-decoration: none;
+  display: inline-block;
+  margin-bottom: 0.5rem;
+}
+
+footer a:hover {
+  color: #fff;
+  text-decoration: underline;
+}
+
+footer i {
+  color: #fff;
+  transition: transform 0.2s;
+}
+
+footer a:hover i {
+  transform: scale(1.2);
+}
+
+footer input[type="email"] {
+  border-radius: 0.25rem 0 0 0.25rem;
+}
+
+footer button {
+  border-radius: 0 0.25rem 0.25rem 0;
+}
+
+/* =====================================
+   SERVICES SECTION
+===================================== */
+.card-title {
+  font-weight: bold;
+  font-size: 1.1rem;
+}
+
+.card-text {
+  font-size: 0.95rem;
+}
+
+/* =====================================
+   GALLERY SECTION
+===================================== */
+.gallery-card {
+  width: 100%;
+  height: 250px;
+  overflow: hidden;
+  border-radius: 12px;
+  position: relative;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+}
+
+.gallery-card a,
+.gallery-card img {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.gallery-card img {
+  object-fit: cover;
+  object-position: center;
+  border-radius: 12px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.gallery-card img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* =====================================
+   CONTACT PAGE STYLING
+===================================== */
+.container h2 {
+  font-size: 2rem;
+  font-weight: 600;
+  color: #0d6efd;
+}
+
+.contain {
+  height: 90vh;
+}
+
+form .form-label i {
+  margin-right: 8px;
+  color: #0d6efd;
+}
+
+form .form-control {
+  border-radius: 8px;
+  border: 1px solid #ced4da;
+  transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+form .form-control:focus {
+  border-color: #0d6efd;
+  box-shadow: 0 0 0 0.2rem rgba(13, 110, 253, 0.25);
+}
+
+form button.btn-primary {
+  padding: 10px 20px;
+  border-radius: 8px;
+  font-weight: 500;
+}
+
+form button.btn-primary i {
+  margin-right: 6px;
+}
+
+.contact-info h5 {
+  color: #0d6efd;
+  font-size: 1.1rem;
+  margin-top: 1.5rem;
+}
+
+.contact-info p {
+  margin-bottom: 1rem;
+  color: #555;
+}
+
+/* =====================================
+   RESPONSIVE DESIGN
+===================================== */
+@media (max-width: 992px) {
+  .hero img {
+    width: 200px;
+  }
+
+  .hero h1 {
+    font-size: 2.5rem;
+  }
+
+  .about-text p {
+    font-size: 1rem;
+  }
+
+  .social-links,
+  .quick-links,
+  .subscription {
+    text-align: center;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero {
+    height: 60vh;
+    text-align: center;
+  }
+
+  .hero img {
+    width: 150px;
+    margin-bottom: 1rem;
+  }
+
+  .hero h1 {
+    font-size: 2rem;
+  }
+
+  .about-text {
+    text-align: center !important;
+  }
+
+  .about-text .btn {
+    display: block;
+    margin: 0 auto;
+  }
+
+  .team-section .col {
+    text-align: center;
+  }
+
+  .footer .input-group {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .footer .input-group input,
+  .footer .input-group button {
+    width: 100%;
+    border-radius: 0.25rem;
+  }
+
+  .footer .input-group button {
+    margin-top: 0.5rem;
+  }
+
+  .contact-info {
+    margin-top: 2rem;
+  }
+
+  .contain {
+    height: auto;
+  }
+
+  form button.btn-primary {
+    width: 100%;
+  }
+}
+
+@media (max-width: 576px) {
+  .hero h1 {
+    font-size: 1.6rem;
+  }
+
+  .meet-team img {
+    width: 70px;
+    height: 70px;
+  }
+
+  footer .row > div {
+    margin-bottom: 2rem;
+  }
+
+  .gallery-item {
+    height: 200px;
+  }
+
+  .contain {
+    height: auto;
+  }
+
+  .right-side {
+    text-align: center;
+  }
+}
