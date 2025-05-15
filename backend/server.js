@@ -1,12 +1,19 @@
+require("dotenv").config(); // Add this at the top
 const express = require("express");
 const nodemailer = require("nodemailer");
 const bodyParser = require("body-parser");
 const cors = require("cors");
 
 const app = express();
-const PORT = 3000;
+const PORT = process.env.PORT || 3000;
 
-app.use(cors());
+// Only allow your frontend to send requests
+app.use(
+  cors({
+    origin: "https://www.crystalpacltd.com",
+  })
+);
+
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 
@@ -19,8 +26,8 @@ app.post("/send", async (req, res) => {
     port: 465,
     secure: true, // true for port 465, false for 587
     auth: {
-      user: "noreply@crystalpacltd.com", // Your Zoho mailbox, not group address
-      pass: "458S1fG5TEKX", // App password from Zoho
+      user: process.env.EMAIL_USER, // Hide your Zoho email
+      pass: process.env.EMAIL_PASS, // Hide your Zoho app password
     },
   });
 
@@ -33,13 +40,13 @@ app.post("/send", async (req, res) => {
 
   try {
     await transporter.sendMail(mailOptions);
-    res.status(200).json({ message: "Email sent successfully via Zoho Mail" });
+    res.status(200).json({ message: "Email sent successfully" });
   } catch (err) {
     console.error(err);
-    res.status(500).json({ message: "Failed to send email via Zoho" });
+    res.status(500).json({ message: "Failed to send email" });
   }
 });
 
 app.listen(PORT, () => {
-  console.log(`Server running on http://localhost:${PORT}`);
+  console.log(`Server is running on port ${PORT}`);
 });
