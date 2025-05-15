@@ -10,7 +10,7 @@ const PORT = process.env.PORT || 3000;
 // Only allow your frontend to send requests
 app.use(
   cors({
-    origin: "https://www.crystalpacltd.com",
+    origin: "*",
   })
 );
 
